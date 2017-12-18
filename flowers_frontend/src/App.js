@@ -33,13 +33,9 @@ class App extends Component {
   };
 
   deleteFlower = flowerData => {
-    fetch(`http://localhost:3000/flowers/{this.id}`, {
+    fetch(`http://localhost:3000/flowers/${flowerData}`, {
       method: "delete"
-    })
-      .then(res => res.json())
-      .then(json => {
-        return json;
-      });
+    });
   };
 
   render() {
@@ -53,6 +49,7 @@ class App extends Component {
         <FlowerContainer
           flowers={this.state.flowers}
           createFlower={this.createFlower}
+          deleteFlower={this.deleteFlower}
         />
       </div>
     );

@@ -20,17 +20,22 @@ class FlowerContainer extends React.Component {
   };
 
   handleDelete = event => {
-    event.preventDefault();
-    this.props.deleteFlower(this.state);
+    let index = parseInt(event.target.id);
+    this.props.deleteFlower(index);
+    document.getElementById(index).remove();
   };
 
   render() {
     const allFlowers = this.props.flowers.map(flower => (
-      <li>
-        Name: {flower.name}
-        <button>Edit</button>
-        <button onClick={this.handleDelete}>Delete</button>
-      </li>
+      <div id={flower.id}>
+        <li>
+          Name: {flower.name}
+          <button>Edit</button>
+          <button id={flower.id} onClick={this.handleDelete}>
+            Delete
+          </button>
+        </li>
+      </div>
     ));
     return (
       <div>
