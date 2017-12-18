@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  sun_needs: MyString
+  soil_needs: MyString
+  height: 1
+  bloom_time: MyString
+  features: MyString
+
+two:
+  name: MyString
+  sun_needs: MyString
+  soil_needs: MyString
+  height: 1
+  bloom_time: MyString
+  features: MyString
